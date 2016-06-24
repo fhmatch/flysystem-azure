@@ -6,14 +6,16 @@ use League\Flysystem\Adapter\AbstractAdapter;
 use League\Flysystem\Adapter\Polyfill\NotSupportingVisibilityTrait;
 use League\Flysystem\Config;
 use League\Flysystem\Util;
-use WindowsAzure\Blob\Internal\IBlob;
-use WindowsAzure\Blob\Models\BlobPrefix;
-use WindowsAzure\Blob\Models\BlobProperties;
-use WindowsAzure\Blob\Models\CopyBlobResult;
-use WindowsAzure\Blob\Models\CreateBlobOptions;
-use WindowsAzure\Blob\Models\ListBlobsOptions;
-use WindowsAzure\Blob\Models\ListBlobsResult;
-use WindowsAzure\Common\ServiceException;
+use MicrosoftAzure\Storage\Blob\BlobRestProxy;
+use MicrosoftAzure\Storage\Blob\Internal\IBlob;
+use MicrosoftAzure\Storage\Blob\Models\BlobPrefix;
+use MicrosoftAzure\Storage\Blob\Models\BlobProperties;
+use MicrosoftAzure\Storage\Blob\Models\CopyBlobResult;
+use MicrosoftAzure\Storage\Blob\Models\CreateBlobOptions;
+use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
+use MicrosoftAzure\Storage\Blob\Models\ListBlobsResult;
+use MicrosoftAzure\Storage\Common\ServiceException;
+
 
 class AzureAdapter extends AbstractAdapter
 {
